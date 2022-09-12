@@ -1,6 +1,7 @@
 const express=require("express");
 const app=express();
 const path=require("path")
+const port=process.env.PORT;
 
 const staticp=path.join(__dirname,"../public")
 
@@ -28,6 +29,6 @@ app.get('*',(req,res)=>{
 })
 
  
-app.listen(8008,()=>{
+app.listen(port,()=>{
     console.log("listening to the server")
 })
